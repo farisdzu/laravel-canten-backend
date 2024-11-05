@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,8 @@ Route::get('home', function () {
 
 //kalau mau crud pakenya resource bukan get
 Route::resource('user', UserController::class);
+Route::resource('product', ProductController::class);
+
 
 //url auth dipindahkan  di app/providers/fotifyservice
 // Route::get('/login', function () {

@@ -18,16 +18,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(10)->create();
+        $this->call([
+            UserSeeder::class,
+            ProductSeeder::class,
 
-        //CARA MEMBUAT DATA DUMY
-
-        User::factory()->create([
-            'name' => 'admin',
-            'email' => 'admin@gmail.com',
-            'phone' =>'082113004533',
-            'role' => 'admin',
-            'password' => Hash::make('38383833333')
         ]);
     }
 }
